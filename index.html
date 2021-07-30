@@ -29,9 +29,18 @@
 	</script>-->
   <script type="text/javascript">
     var video=document.querySelector("body > video")
-    video.onmouseclick=() => {
-      video.play();
-    }
+    const promise = video.play();
+
+      if (promise !== undefined) {
+        promise.then(() => {
+          // Autoplay started
+        }).catch(error => {
+          // Autoplay was prevented.
+          video.onmouseclick=() => {
+            video.play();
+          }
+        });
+      }
   </script>
 </body>
 </html>
