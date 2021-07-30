@@ -5,7 +5,7 @@
 </head>
 <body>
 	<video src="rick.mp4" style="width: 100%;height: 100%;margin: none;padding: none;border: none;" autoplay="true" loop="loop"></video>
-  <script src="./flv.js"></script>
+  <!--<script src="./flv.js"></script>
 	<script type="text/javascript">
 		var video=document.querySelector("body > video")
 		const promise = video.play();
@@ -26,6 +26,12 @@
           }
         });
       }
-	</script>
+	</script>-->
+  <script type="text/javascript">
+    var video=document.querySelector("body > video")
+    video.onmouseclick=() => {
+      video.play();
+    }
+  </script>
 </body>
 </html>
